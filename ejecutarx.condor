@@ -1,0 +1,7 @@
+Executable		= x
+Universe		= vanilla
+Output			= x.out
+Error 			= x.err.$(cluster)
+Log 			= x.log.$(cluster)
+should_transfer_files = YES 
+Queue

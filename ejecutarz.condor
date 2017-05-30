@@ -1,0 +1,7 @@
+Executable		= z
+Universe		= vanilla
+Output			= z.out
+Error 			= z.err.$(cluster)
+Log 			= z.log.$(cluster)
+should_transfer_files = YES 
+Queue

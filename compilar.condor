@@ -1,0 +1,26 @@
+universe 				= docker
+docker_image			= frolvlad/alpine-gcc
+executable 				= gcc
+transfer_executable 	= false
+arguments				= --static x.c -o x
+should_transfer_files   = YES
+transfer_input_files    = x.c
+when_to_transfer_output = ON_EXIT
+output                  = compilarx.out.$(Cluster)
+error                   = compilarx.err.$(Cluster)
+log                     = compilarx.log.$(Cluster)
+queue 1
+
+arguments				= --static y.c -o y
+transfer_input_files    = y.c
+output                  = compilary.out.$(Cluster)
+error                   = compilary.err.$(Cluster)
+log                     = compilary.log.$(Cluster)
+queue 1
+
+arguments				= --static z.c -o z
+transfer_input_files    = z.c
+output                  = compilarz.out.$(Cluster)
+error                   = compilarz.err.$(Cluster)
+log                     = compilarz.log.$(Cluster)
+queue 1

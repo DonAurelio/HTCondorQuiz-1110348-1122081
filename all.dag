@@ -1,0 +1,7 @@
+Job wget wget.condor
+Job compilar compilar.condor
+Job ejecutarx ejecutarx.condor
+Job ejecutary ejecutary.condor
+Job ejecutarz ejecutarz.condor
+PARENT wget CHILD compilar
+PARENT compilar CHILD ejecutarx ejecutary ejecutarz

@@ -1,9 +1,9 @@
 Executable		= /usr/bin/wget
 Arguments		= https://raw.githubusercontent.com/josanabr/HTCondor-quiz/master/x.c
 Universe		= vanilla
-Output			= out.$(cluster)
-Error 			= err.$(cluster)
-Log 			= log.$(cluster)
+Output			= wget.out.$(cluster)
+Error 			= wget.err.$(cluster)
+Log 			= wget.log.$(cluster)
 should_transfer_files = YES 
 Queue
 
