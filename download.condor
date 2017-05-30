@@ -1,0 +1,15 @@
+Executable		= /usr/bin/wget
+Arguments		= https://raw.githubusercontent.com/josanabr/HTCondor-quiz/master/x.c
+Universe		= vanilla
+Output			= out.$(cluster)
+Error 			= err.$(cluster)
+Log 			= log.$(cluster)
+should_transfer_files = YES 
+Queue
+
+Arguments		= https://raw.githubusercontent.com/josanabr/HTCondor-quiz/master/y.c
+Queue
+
+Arguments		= https://raw.githubusercontent.com/josanabr/HTCondor-quiz/master/z.c
+Queue
+
